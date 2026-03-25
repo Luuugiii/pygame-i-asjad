@@ -25,7 +25,7 @@ while running:
 
     screen.fill(bg)
 
-    #kui taust on valge, lisa outline
+    #kui taust on valge, ss lisab outlineäi
     if bg == (255, 255, 255):
         pygame.draw.circle(screen, (255, 255, 255), (150, 220), 50)
         pygame.draw.circle(screen, (0, 0, 0), (150, 220), 50, 2)
