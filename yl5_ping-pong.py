@@ -68,7 +68,7 @@ while running:
     if ballY <= 0:
         ballSpeedY *= -1
 
-    #alumine sein > miinus punkt + porkab iles
+    #alumine sein > miinus punkt + porkab yles
     if ballY >= screenHeight - 20:
         score -= 1
         ballSpeedY *= -1
