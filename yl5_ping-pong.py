@@ -64,11 +64,11 @@ while running:
     if ballX <= 0 or ballX >= screenWidth - 20:
         ballSpeedX *= -1
 
-    #ülemine sein → põrkab
+    #ylemine sein > porkab
     if ballY <= 0:
         ballSpeedY *= -1
 
-    #alumine sein → miinus punkt + põrkab üles
+    #alumine sein > miinus punkt + porkab iles
     if ballY >= screenHeight - 20:
         score -= 1
         ballSpeedY *= -1
