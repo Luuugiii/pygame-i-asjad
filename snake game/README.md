@@ -1,4 +1,4 @@
-# SINU-MODE Ussimäng 🐍
+#Ussimäng🐍
 
 **Autor:** Mikk-Gregor  
 **Kursus:** Tarkvaraarenduse projekt  
