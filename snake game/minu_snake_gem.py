@@ -37,7 +37,7 @@ PLOKI  = 20     # ühe ruudustikuploki suurus (uss liigub sammuga PLOKI pikselit
 ekraan = pygame.display.set_mode((LAIUS, KORGUS))
 pygame.display.set_caption("SINU-MODE Ussimäng")
 
-# kellaobj framerate piiramiseks
+# kellaobjekti framerate piiramiseks
 kell = pygame.time.Clock()
 
 # ── värvikonstantid (R, G, B) ─────────────────────────────────────────────────
