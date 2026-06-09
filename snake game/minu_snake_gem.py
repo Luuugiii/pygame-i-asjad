@@ -2,7 +2,7 @@
 SINU-MODE Ussimäng — Lõplik versioon
 =====================================
 Autor:    Mikk-Gregor
-Kursus:   Programmeerimise alused
+Kursus:   Tarkvaraarenduse projekt
 Fail:     sinu_mode.py
 
 Lähtepunkt: minu_tehtud_mang/sinu_mode.py (OOP klass-struktuur test_1 põhjal)
@@ -678,7 +678,7 @@ def mang(alg_kiirus):
 # ══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
-    # põhitsükkel: start-ekraan → mäng → uuesti, kuni kasutaja väljub
+    # põhitsükkel: start-ekraan > mäng > uuesti, kuni kasutaja väljub
     while True:
         alg_kiirus = algus_ekraan()   # näita start-ekraani, hangi kiirus
         mang(alg_kiirus)              # käivita mäng, see lõpeb game-over-ga
