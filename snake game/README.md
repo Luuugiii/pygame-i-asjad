@@ -1,7 +1,7 @@
 # SINU-MODE Ussimäng 🐍
 
 **Autor:** Mikk-Gregor  
-**Kursus:** Programmeerimise alused  
+**Kursus:** Tarkvaraarenduse projekt  
 **Teek:** Python + PyGame
 
 ---
