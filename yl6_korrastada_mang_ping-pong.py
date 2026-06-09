@@ -3,10 +3,13 @@ import random
 
 pygame.init()
 
-#background musicccc
+#audiod
 pygame.mixer.music.load("music/airship.mp3")
-pygame.mixer.music.set_volume(0.2)
+pygame.mixer.music.set_volume(0.8)
 pygame.mixer.music.play(-1)
+
+bounceSound = pygame.mixer.Sound("music/bounce.wav")
+gameOverSound = pygame.mixer.Sound("music/game_over.wav")
 
 #ekraani size
 screenWidth = 640
@@ -19,8 +22,8 @@ pygame.display.set_caption("ping pong mikk-gregor")
 bgColor = (200, 230, 255)
 
 #piltide uploadimine
-ballImage = pygame.image.load(r"C:\Users\duden\Desktop\coding\pildid\ball.png")
-padImage = pygame.image.load(r"C:\Users\duden\Desktop\coding\pildid\Pad.png")
+ballImage = pygame.image.load(r"X:\PyCharmMiscProject\yl6_korrastatud_ping-pong\pildid\ball.png")
+padImage = pygame.image.load(r"X:\PyCharmMiscProject\yl6_korrastatud_ping-pong\pildid\pad.png")
 
 #size muutmine
 ballImage = pygame.transform.scale(ballImage, (20, 20))
@@ -90,6 +93,7 @@ while running:
 
     #mang lopp kui pall puudutab alumist aart
     if ballY >= screenHeight - 20:
+        gameOverSound.play()   #game over heli
         gameOverText = font.render("GAME OVER", True, (255, 0, 0))
         screen.fill(bgColor)
         screen.blit(gameOverText, (220, 220))
@@ -104,6 +108,7 @@ while running:
     if ballRect.colliderect(padRect) and ballSpeedY > 0:
         ballSpeedY *= -1
         score += 1
+        bounceSound.play()     # <-- BOUNCE HELI
 
     #drawing
     screen.fill(bgColor)
