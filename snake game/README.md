@@ -21,7 +21,7 @@ Lähtepunktiks valiti `minu_tehtud_mang/sinu_mode.py` (OOP struktuur test_1 põh
 | 2 | `test 2.py` | [rajatdiptabiswas / GitHub](https://github.com/rajatdiptabiswas/snake-pygame) | Difficulty süsteem, nooleklahvid + WASD, game-over stiil |
 | 3 | `test 3.py` | [MA-Abahmane / GitHub](https://github.com/MA-Abahmane/Python-Python) | Tkinter/Pygame hybrid, toiduemoji stiil, heli ideed |
 
-**Valiku põhjendus:** `sinu_mode.py` (test_1 baas) on valitud lähtepunktiks, kuna:
+**Valiku põhjendus:** `minu_snake_gem.py` (test_1 baas) on valitud lähtepunktiks, kuna:
 - OOP struktuur on hästi laiendatav
 - Ruudustiku loogika toimib täpsemalt kui test_2 pixel-põhine lähenemine
 - Lihtsam lisada uusi funktsioone (elud, toidutüübid) ilma kogu struktuuri muutmata
