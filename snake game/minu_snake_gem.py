@@ -3,7 +3,6 @@ SINU-MODE Ussimäng
 =====================================
 Autor:    Mikk-Gregor
 Kursus:   Tarkvaraarenduse projekt
-Fail:     sinu_mode.py
 
 Lähtepunkt: minu_tehtud_mang/sinu_mode.py (OOP klass-struktuur test_1 põhjal)
 Integreeritud koodist:
