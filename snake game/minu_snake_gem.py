@@ -1,5 +1,5 @@
 """
-SINU-MODE Ussimäng — Lõplik versioon
+SINU-MODE Ussimäng
 =====================================
 Autor:    Mikk-Gregor
 Kursus:   Tarkvaraarenduse projekt
