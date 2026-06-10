@@ -2,9 +2,6 @@
 import random
 from tkinter import *
 
-# =========================
-# SETTINGS
-# =========================
 WIDTH = 500
 HEIGHT = 500
 SPACE_SIZE = 20
@@ -15,9 +12,6 @@ FOOD_TYPES = ["normal", "bonus", "poison"]
 
 SNAKE_COLOR = "#FFFF00"
 
-# =========================
-# GLOBAL STATE
-# =========================
 score = 0
 high_score = 0
 lives = 3
@@ -32,9 +26,6 @@ selected_speed = 200
 SPEED = 200
 
 
-# =========================
-# SNAKE
-# =========================
 class Snake:
     def __init__(self):
         self.coordinates = []
@@ -53,9 +44,6 @@ class Snake:
             self.squares.append(sq)
 
 
-# =========================
-# FOOD
-# =========================
 class Food:
     def __init__(self):
         x = random.randint(0, (WIDTH // SPACE_SIZE) - 1) * SPACE_SIZE
@@ -81,9 +69,6 @@ class Food:
         )
 
 
-# =========================
-# START SCREEN
-# =========================
 def show_start_screen():
     canvas.delete(ALL)
 
@@ -128,9 +113,6 @@ def show_start_screen():
                        font=("consolas", 13))
 
 
-# =========================
-# DIRECTION CONTROL
-# =========================
 def change_direction(new_dir):
     global direction
 
@@ -144,10 +126,6 @@ def change_direction(new_dir):
     if new_dir != opposite.get(direction):
         direction = new_dir
 
-
-# =========================
-# DIFFICULTY (FIXED)
-# =========================
 def set_speed(event):
     global selected_speed
 
@@ -166,9 +144,6 @@ def set_speed(event):
     show_start_screen()
 
 
-# =========================
-# START GAME
-# =========================
 def start_game(event=None):
     global game_started, on_start_screen, snake, food, score, lives, SPEED
 
@@ -187,9 +162,6 @@ def start_game(event=None):
     window.after(SPEED, next_turn, snake, food)
 
 
-# =========================
-# PAUSE
-# =========================
 def toggle_pause(event=None):
     global paused
     paused = not paused
@@ -203,9 +175,6 @@ def reset_round():
     canvas.delete("food")
 
 
-# =========================
-# GAME LOOP
-# =========================
 def next_turn(snake, food):
     global score, lives, high_score, SPEED
 
@@ -235,9 +204,6 @@ def next_turn(snake, food):
     )
     snake.squares.insert(0, sq)
 
-    # =========================
-    # FOOD
-    # =========================
     if x == food.coordinates[0] and y == food.coordinates[1]:
 
         if food.type == "normal":
@@ -265,9 +231,6 @@ def next_turn(snake, food):
             canvas.delete(snake.squares[-1])
             del snake.squares[-1]
 
-    # =========================
-    # COLLISION FIX
-    # =========================
     out_of_bounds = (
         x < 0 or x >= WIDTH or
         y < 0 or y >= HEIGHT
@@ -294,9 +257,6 @@ def next_turn(snake, food):
     window.after(SPEED, next_turn, snake, food)
 
 
-# =========================
-# GAME OVER
-# =========================
 def game_over():
     canvas.delete(ALL)
 
@@ -311,9 +271,6 @@ def game_over():
                        font=("consolas", 14))
 
 
-# =========================
-# TKINTER INIT
-# =========================
 window = Tk()
 window.title("Snake Game")
 
@@ -329,9 +286,6 @@ label = Label(window,
 label.pack()
 
 
-# =========================
-# CONTROLS (FIXED)
-# =========================
 window.bind("<Left>", lambda e: change_direction("left"))
 window.bind("<Right>", lambda e: change_direction("right"))
 window.bind("<Up>", lambda e: change_direction("up"))
@@ -342,9 +296,6 @@ window.bind("<Key>", set_speed)
 window.bind("<Return>", start_game)
 
 
-# =========================
-# START
-# =========================
 show_start_screen()
 
 window.mainloop()
